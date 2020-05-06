@@ -4,17 +4,17 @@
 
 # Site
 title: There for You
-subtitle: '副标题'
+subtitle: 'subtitle'
 description: 'you can see this description'
 keywords: keyword1,keyword2,keyword3
-author: LZP-kivid
+author: LZP-aw本人
 language: zh-CN
 timezone: ''
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: http://yoursite.com/
-root: /blog
+root: /blog/
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
@@ -93,7 +93,7 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: next
+theme: custom
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
