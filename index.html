@@ -1,19 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
-<script src="css/vue.min.js"></script>
-<script src="css/botui.js"></script>
+
+<html>
 <head>
-	<meta charset="UTF-8">
-	<title>GitHubPages</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>正在跳转</title>
 </head>
 <body>
-	<p>Hello</p>
-	<p>it's init pages</p>
-	<p><a href="https://kivid.github.io/blog/">>>Blog</a></p>
-<div class="botui-app-container" id="botui-app">
-  <bot-ui>test</bot-ui>
-</div>
+<form name=loading> 
+　<p align=center> <font color="#0066ff" size="2">正在跳转，请稍等</font><font color="#0066ff" size="2" face="Arial">...</font>
+　　<input type=text name=chart size=46 style="font-family:Arial; font-weight:bolder; color:#0066ff; background-color:#fef4d9; padding:0px; border-style:none;"> 
+　　
+　　<input type=text name=percent size=47 style="color:#0066ff; text-align:center; border-width:medium; border-style:none;"> 
+　　<script>　 
+var bar=0　 
+var line="||"　 
+var amount="||"　 
+count()　 
+function count(){　 
+bar=bar+2　 
+amount =amount + line　 
+document.loading.chart.value=amount　 
+document.loading.percent.value=bar+"%"　 
+if (bar<99)　 
+{setTimeout("count()",20);}　 
+else　 
+{window.location = "http://121.36.6.132/blog/";}　 
+}</script> 
+　</p> 
+</form> 
+<p align="center"> 如果您的浏览器不支持跳转,<a style="text-decoration: none" href="http://121.36.6.132/blog/"><font color="#FF0000">请点这里</font></a>.</p>
 </body>
-
-<script src="cssjs/cursor.js"></script>
 </html>

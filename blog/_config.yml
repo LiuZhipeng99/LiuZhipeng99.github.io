@@ -4,11 +4,11 @@
 
 # Site
 title: There for You
-subtitle: 'subtitle'
-description: 'you can see this description'
-keywords: keyword1,keyword2,keyword3
-author: LZP-aw本人
-language: zh-CN
+subtitle: keep loving the world
+description: 四月是你的谎言
+keywords: blog,keyword2,keyword3
+author: 友人A
+language: zh-Hans
 timezone: ''
 
 # URL
@@ -101,3 +101,16 @@ deploy:
   type: git
   repo: git@github.com:kivid/blog.git
   branch: gh-pages
+
+plugins: hexo-generate-feed
+
+search:
+  path: search.xml
+  field: post
+  format: html
+  limit: 10000
+
+lazyload:
+  enable: true
+  onlypost: true #全部图片否
+  #loadingImg: /images/loading.png
