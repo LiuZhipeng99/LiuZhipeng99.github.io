@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta http-equiv="content-type" content="text/html;charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>For XJT</title>
+
+<link rel="stylesheet" type="text/css" href="Happybirthday/css/style.css">
+
+<script type="text/javascript" src="Happybirthday/js/jquery.min.js">
+</script>
+<script type="text/javascript" src="Happybirthday/js/vector.js"></script>
+
+
+<script >
+	function myfunction()
+
+	{
+	
+	var x=document.getElementById("entry_name").value;
+	var y=document.getElementById("entry_password").value;
+	if(x==""||y=="")
+		{alert("名字和生日还记得不 ")}
+	else  if (x=="徐靖婷"&& y=="20001031")
+	// else  if (x=="1"&& y=="1")
+		{
+			requestFullScreen();
+		setTimeout(function(){location.href="./html/second.html";},2000);
+			}
+	else {alert("笨还是傻 是20001031啊");}}
+	
+	function requestFullScreen(element) {
+		var element=document.documentElement;
+		var requestMethod = element.requestFullScreen || //W3C
+		element.webkitRequestFullScreen || //Chrome等
+		element.mozRequestFullScreen || //FireFox
+		element.msRequestFullScreen; //IE11
+		if (requestMethod) {
+			requestMethod.call(element);
+		}
+		else if (typeof window.ActiveXObject !== "undefined") {//for Internet Explorer
+			var wscript = new ActiveXObject("WScript.Shell");
+			if (wscript !== null) {
+			 wscript.SendKeys("{F11}");
+			}
+		}
+}
+</script>
+</head>
+<style type="text/css">
+body {
+  background: url(./images/bg.png);
+  
+  color: #333;
+  font-size: 62.5%;
+  font-family: "ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","メイリオ","Meiryo","ＭＳ Ｐゴシック","MS PGothic",Sans-Serif;
+  line-height: 1.5;
+}
+
+#simple3D {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 900px;
+}
+#simple3D div {
+  min-height: 1100px;
+  width: 120%;
+}
+#simple3D div.dot {
+  background: url(./images/dot2.png);
+}
+#simple3D div.kinoco {
+  background: url(./images/kinoco.png);
+}
+#simple3D div.star {
+  background: url(./images/star.png);
+}	
+</style>
+<audio autoplay="autoplay" loop="loop" preload="auto"
+
+           src="Happybirthday/弹奏微风.mp3"></audio>
+<body>
+<div id="container">
+	<div id="simple3D">
+	  	<div class="dot" ></div>
+	  	<div class="kinoco"></div>
+	  	<div class="star"></div>
+</div>   
+
+
+<div id="container">
+	<div id="output">
+		<div class="containerT">
+			<h1>Happy Birthday To U</h1>
+			<form class="form" id="entry_form">
+				<input type="text" placeholder="Your name" id="entry_name" >
+				<input type="password" placeholder="Birthday" id="entry_password">
+				
+				
+					<button type="button" id="entry_btn" type="button" onclick="myfunction()">Click me!(๑•̀ㅂ•́)و✧</button> 
+	
+				<div id="prompt" class="prompt"></div>
+			</form>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+    $(function(){
+        //Victor("container", "output");   //登陆背景函数
+        $("#entry_name").focus();
+        $(document).keydown(function(event){
+            if(event.keyCode==13){ //键入回车的Unicode为13
+                $("#entry_btn").click();
+            }
+        });
+    });
+</script>
+<script src="js/jquery-1.11.0.min.js"></script>
+	<script src="js/jquery.simple3D.js"></script>
+	<script>
+		$("#simple3D").simple3D({
+			moveX:3,
+			moveY:3,
+			bgImage:true,
+			targetAll:true,
+			reverseX: true,
+			reverseY: true
+		});
+	</script>
+<script src="https://cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.js"></script>
+</body>
+<script src="cssjs/cursor.js"></script>
+</html>
