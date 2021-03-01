@@ -70,5 +70,5 @@ def on_click(x,y,button,pressed):
 cascade = cv2.CascadeClassifier("haarcascade_eye.xml")
 video_capture = cv2.VideoCapture(0)
 
-with Listener(on_click = on_click) as listener:
+with Listener(on_click = on_click2) as listener:
   listener.join()
