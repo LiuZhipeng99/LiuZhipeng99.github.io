@@ -1,0 +1,21 @@
+{
+    "shell_cmd": "D:\\Anaconda3\\envs\\tf2\\python -u \"$file\" --mode=test",
+    // "file_regex": "^[ ]*File \"(...*?)\", line ([0-9]*)",
+    // "selector": "source.python",
+
+    "env": {"PYTHONIOENCODING": "utf-8"},
+
+    "variants":
+    [
+        // {
+        //     "name": "Syntax Check",
+        //     "shell_cmd": "D:\\Anaconda3\\envs\\tf2\\python -m py_compile \"${file}\"",
+        // },
+ // ---------------------------- 新添加的 ---------------------------
+        // 注意上一行结尾有一个`,`，否则会弹框报json语法错误
+        {
+            "name": "Run in cmd",
+            "shell_cmd": "start cmd /c \"D:\\Anaconda3\\envs\\tf2\\python ${file} & pause\"",
+        }
+    ]
+}
