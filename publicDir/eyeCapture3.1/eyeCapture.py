@@ -10,7 +10,7 @@ import shutil
 from pynput.mouse import Listener
 
 
-root = input("Enter the directory to store the images: ")
+root = input("Enter the directory to store the eye images: ")
 if os.path.isdir(root):
   resp = ""
   while not resp in ["Y", "N"]:
@@ -70,5 +70,5 @@ def on_click(x,y,button,pressed):
 cascade = cv2.CascadeClassifier("haarcascade_eye.xml")
 video_capture = cv2.VideoCapture(0)
 
-with Listener(on_click = on_click2) as listener:
+with Listener(on_click = on_click) as listener:
   listener.join()
