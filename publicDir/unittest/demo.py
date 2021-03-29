@@ -1,7 +1,7 @@
 # python的单元测试框架很多unittest、pytest、nose等
 import unittest,sys
 import pytest,nose
-import HTMLTestRunner
+import HTMLTestRunnerNew
 
 
 def testfun(a,b):
@@ -27,7 +27,12 @@ if __name__ == '__main__':
 	# 默认txt报告使用模块生成html报告
 	suite = unittest.TestSuite()
 	suite.addTests(unittest.TestLoader().loadTestsFromTestCase(Demo))
-	runner = HTMLTestRunner.HTMLTestRunner(open("result.html",'w'))
+	runner = HTMLTestRunnerNew.HTMLTestRunner(stream=open("result.html",'wb'),
+        verbosity=2,
+        title='接口自动化测试报告',
+        description='xxxx测试',
+        tester='LIU' #这个是new新加的
+    )
 	runner.run(suite)
 
 	# 改了个html模块的bug，解码问题
